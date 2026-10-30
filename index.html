@@ -48,6 +48,8 @@ body{
         Arial,
         Helvetica,
         sans-serif;
+
+    padding-bottom: 90px;
 }
 
 
@@ -102,7 +104,7 @@ body{
     max-width:680px;
 
     margin:0 auto;
-    padding:0 13px 40px;
+    padding:0 13px 20px;
 
     display:flex;
     flex-direction:column;
@@ -522,24 +524,33 @@ body{
 
 /* =========================================
    DOWNLOAD ANTI-BAN PANEL BUTTON
-   (नीचे ज्यादा गैप + SHINE EFFECT)
+   FIXED AT ABSOLUTE BOTTOM
 ========================================= */
 
 .anti-ban-section{
-    width:100%;
-    margin:70px 0 0;
-    padding:0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 6px 10px env(safe-area-inset-bottom, 6px);
+    background: rgba(43, 43, 43, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 9999;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.6);
 }
 
 .anti-ban-btn{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
+    gap:10px;
 
     width:100%;
-    height:64px;
-    padding:0 16px;
+    height:58px;
+    padding:0 14px;
 
     background:linear-gradient(
         0deg,
@@ -549,19 +560,19 @@ body{
     color:#fff;
 
     text-decoration:none;
-    font-size:17px;
+    font-size:16px;
     font-weight:700;
     text-transform:uppercase;
     letter-spacing:0.4px;
 
-    border-radius:50px;
+    border-radius:40px;
 
-    box-shadow:0 0.7em 1.5em -0.5em #0091ff98;
+    box-shadow:0 4px 16px rgba(0,145,255,0.45);
 
     position:relative;
     overflow:hidden;
 
-    transition:transform 0.2s ease, box-shadow 0.2s ease;
+    transition:transform 0.15s ease;
 }
 
 .anti-ban-btn::before{
@@ -571,8 +582,8 @@ body{
     left:-100%;
     width:100%;
     height:100%;
-    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
-    animation:shine 3s ease-in-out infinite;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation:shine 2.8s ease-in-out infinite;
 }
 
 @keyframes shine{
@@ -580,22 +591,16 @@ body{
     50%{ left:100%; }
 }
 
-.anti-ban-btn:hover{
-    transform:translateY(-1px);
-    box-shadow:0 0.5em 1.5em -0.5em #0091ff98;
-}
-
 .anti-ban-btn:active{
-    transform:scale(0.98);
-    box-shadow:0 0.3em 1em -0.5em #0091ff98;
+    transform:scale(0.97);
 }
 
 .btn-image{
-    width:46px;
-    height:46px;
-    border-radius:12px;
+    width:42px;
+    height:42px;
+    border-radius:10px;
     object-fit:cover;
-    border:2px solid rgba(255,255,255,0.7);
+    border:2px solid rgba(255,255,255,0.75);
     flex-shrink:0;
     position:relative;
     z-index:1;
@@ -626,7 +631,7 @@ body{
 
     .main{
         padding:
-            0 10px 30px;
+            0 10px 16px;
     }
 
     .watch-title{
@@ -639,8 +644,6 @@ body{
     .video-box{
         border-radius:14px;
     }
-
-    /* केवल 8px gap */
 
     .diamond-card{
         margin-top:8px;
@@ -708,18 +711,18 @@ body{
     }
 
     .anti-ban-section{
-        margin-top:56px;
+        padding: 5px 8px env(safe-area-inset-bottom, 5px);
     }
 
     .anti-ban-btn{
-        height:58px;
-        font-size:15px;
+        height:54px;
+        font-size:14px;
         gap:8px;
     }
 
     .btn-image{
-        width:40px;
-        height:40px;
+        width:36px;
+        height:36px;
     }
 }
 
@@ -882,35 +885,35 @@ body{
     </section>
 
 
-    <!-- ======================================
-         DOWNLOAD ANTI-BAN PANEL BUTTON
-         (नीचे ज्यादा गैप + SHINE)
-    ======================================= -->
+</main>
 
-    <section class="anti-ban-section">
 
-        <a
-            class="anti-ban-btn"
-            href="https://macro.ultimatetop.in/"
-            target="_blank"
-            rel="noopener noreferrer"
+<!-- ======================================
+     DOWNLOAD ANTI-BAN PANEL BUTTON
+     (FIXED AT ABSOLUTE BOTTOM)
+====================================== -->
+
+<section class="anti-ban-section">
+
+    <a
+        class="anti-ban-btn"
+        href="https://macro.ultimatetop.in/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <img
+            class="btn-image"
+            src="https://www.image2url.com/r2/default/files/1789108019877-cb63dc15-b037-48a4-996a-f6db10e486b7.png"
+            alt="Anti-Ban Panel"
+            oncontextmenu="return false;"
         >
 
-            <img
-                class="btn-image"
-                src="https://www.image2url.com/r2/default/files/1789108019877-cb63dc15-b037-48a4-996a-f6db10e486b7.png"
-                alt="Anti-Ban Panel"
-                oncontextmenu="return false;"
-            >
+        <span>DOWNLOAD ANTI-BAN PANEL</span>
 
-            <span>DOWNLOAD ANTI-BAN PANEL</span>
+    </a>
 
-        </a>
-
-    </section>
-
-
-</main>
+</section>
 
 
 </body>
